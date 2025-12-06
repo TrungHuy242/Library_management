@@ -2,9 +2,9 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
-import controller.PhieuMuonController;
-import controller.SachController;
-import controller.BanDocController;
+import client.PhieuMuonClientController;
+import client.SachClientController;
+import client.BanDocClientController;
 import model.nhanVien;
 
 public class MainForm extends JFrame {
@@ -369,21 +369,21 @@ public class MainForm extends JFrame {
 		SwingUtilities.invokeLater(() -> {
 			try {
 				// Tổng sách
-				int tongSach = new SachController().layTatCaSach().stream()
+				int tongSach = new SachClientController().layTatCaSach().stream()
 						.mapToInt(s -> s.getSoLuongTong()).sum();
 				lblTongSach.setText(tongSach + " cuốn");
 
 				// Tổng độc giả
-				int tongDocGia = new BanDocController().layTatCa().size();
+				int tongDocGia = new BanDocClientController().layTatCa().size();
 				lblTongDocGia.setText(tongDocGia + " người");
 
 				// Sách đang mượn
-				int dangMuon = new SachController().layTatCaSach().stream()
+				int dangMuon = new SachClientController().layTatCaSach().stream()
 						.mapToInt(s -> s.getSoLuongTong() - s.getSoLuongHienTai()).sum();
 				lblDangMuon.setText(dangMuon + " cuốn");
 
 				// Phiếu quá hạn
-				int quaHan = new PhieuMuonController().demPhieuQuaHan();
+				int quaHan = new PhieuMuonClientController().demPhieuQuaHan();
 				lblQuaHan.setText(quaHan + " phiếu");
 				if (quaHan > 0) {
 					lblQuaHan.setForeground(Color.RED);
@@ -397,7 +397,7 @@ public class MainForm extends JFrame {
 	}
 
 	public void capNhatCanhBao() {
-		int soQuaHan = new PhieuMuonController().demPhieuQuaHan();
+		int soQuaHan = new PhieuMuonClientController().demPhieuQuaHan();
 		if (soQuaHan > 0) {
 			lblCanhBao.setText("CẢNH BÁO: " + soQuaHan + " PHIẾU QUÁ HẠN - CẦN XỬ LÝ NGAY!");
 			lblCanhBao.setForeground(new Color(255, 255, 0));

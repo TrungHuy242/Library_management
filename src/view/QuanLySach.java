@@ -1,6 +1,6 @@
 package view;
 
-import controller.SachController;
+import client.SachClientController;
 import model.sach;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class QuanLySach extends JFrame {
 
-    private SachController sachCtrl = new SachController();
+    private SachClientController sachCtrl = new SachClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

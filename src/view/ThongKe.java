@@ -1,8 +1,8 @@
 package view;
 
-import controller.PhieuMuonController;
-import controller.SachController;
-import controller.BanDocController;
+import client.PhieuMuonClientController;
+import client.SachClientController;
+import client.BanDocClientController;
 import controller.XmlLogController;
 import model.phieuMuon;
 import model.sach;
@@ -213,21 +213,21 @@ public class ThongKe extends JFrame {
 
     private void loadThongKe() {
         // Tổng sách
-        int tongSach = new SachController().layTatCaSach().stream()
+        int tongSach = new SachClientController().layTatCaSach().stream()
                 .mapToInt(sach::getSoLuongTong).sum();
         lblTongSach.setText(tongSach + " cuốn");
 
         // Sách đang mượn
-        int dangMuon = new SachController().layTatCaSach().stream()
+        int dangMuon = new SachClientController().layTatCaSach().stream()
                 .mapToInt(s -> s.getSoLuongTong() - s.getSoLuongHienTai()).sum();
         lblDangMuon.setText(dangMuon + " cuốn");
 
         // Độc giả
-        int tongDocGia = new BanDocController().layTatCa().size();
+        int tongDocGia = new BanDocClientController().layTatCa().size();
         lblDocGia.setText(tongDocGia + " người");
 
         // Phiếu quá hạn + chi tiết
-        List<phieuMuon> dsQuaHan = new PhieuMuonController().layPhieuQuaHan();
+        List<phieuMuon> dsQuaHan = new PhieuMuonClientController().layPhieuQuaHan();
         lblQuaHan.setText(dsQuaHan.size() + " phiếu");
         lblQuaHan.setForeground(dsQuaHan.size() > 0 ? Color.RED : new Color(60, 60, 60));
 

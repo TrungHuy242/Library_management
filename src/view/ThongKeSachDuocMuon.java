@@ -1,6 +1,6 @@
 package view;
 
-import controller.PhieuMuonController;
+import client.PhieuMuonClientController;
 import model.CTPhieuMuon;
 import model.phieuMuon;
 
@@ -18,7 +18,7 @@ import java.util.Set;
 
 public class ThongKeSachDuocMuon extends JFrame {
 
-    private PhieuMuonController pmCtrl = new PhieuMuonController();
+    private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

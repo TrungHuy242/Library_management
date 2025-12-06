@@ -1,6 +1,6 @@
 package view;
 
-import controller.BanDocController;
+import client.BanDocClientController;
 import model.banDoc;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class QuanLyDocGia extends JFrame {
 
-    private BanDocController bdCtrl = new BanDocController();
+    private BanDocClientController bdCtrl = new BanDocClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

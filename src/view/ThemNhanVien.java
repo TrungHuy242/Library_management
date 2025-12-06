@@ -1,6 +1,6 @@
 package view;
 
-import controller.AuthController;
+import client.AuthClientController;
 import model.nhanVien;
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +12,7 @@ public class ThemNhanVien extends JDialog {
     private JComboBox<String> cmbVaiTro;
     private JLabel lblErrorHoTen, lblErrorSdt, lblErrorTaiKhoan, lblErrorMatKhau;
     private QuanLyNhanVien parent;
-    private AuthController authCtrl = new AuthController();
+    private AuthClientController authCtrl = new AuthClientController();
 
     public ThemNhanVien(QuanLyNhanVien parent) {
         super(parent, "THÊM NHÂN VIÊN MỚI", true);

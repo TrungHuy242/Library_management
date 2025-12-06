@@ -1,6 +1,6 @@
 package view;
 
-import controller.BanDocController;
+import client.BanDocClientController;
 import model.banDoc;
 import javax.swing.*;
 import java.awt.*;
@@ -375,7 +375,7 @@ public class SuaDocGia extends JDialog {
     }
 
     private void loadDuLieuHienTai() {
-        banDoc bd = new BanDocController().layTheoMa(maBanDoc);
+        banDoc bd = new BanDocClientController().layTheoMa(maBanDoc);
         if (bd != null) {
             txtHoTen.setText(bd.getHoTen());
             txtLop.setText(bd.getLop() != null ? bd.getLop() : "");
@@ -420,7 +420,7 @@ public class SuaDocGia extends JDialog {
                 bd.setNgaySinh(java.sql.Date.valueOf(ns));
             }
 
-            boolean ok = new BanDocController().sua(bd);
+            boolean ok = new BanDocClientController().sua(bd);
             if (ok) {
                 JOptionPane.showMessageDialog(this,
                         "Sửa độc giả thành công!",

@@ -1,6 +1,6 @@
 package view;
 
-import controller.TacGiaController;
+import client.TacGiaClientController;
 import model.tacGia;
 import javax.swing.*;
 import java.awt.*;
@@ -250,7 +250,7 @@ public class SuaTacGia extends JDialog {
     }
 
     private void loadDuLieuHienTai() {
-        tacGia tg = new TacGiaController().layTheoMa(maTacGia);
+        tacGia tg = new TacGiaClientController().layTheoMa(maTacGia);
         if (tg != null) {
             txtTenTacGia.setText(tg.getTenTacGia());
             if (tg.getNamSinh() != null) {
@@ -287,7 +287,7 @@ public class SuaTacGia extends JDialog {
 
             tg.setQuocTich(txtQuocTich.getText().trim());
 
-            boolean ok = new TacGiaController().sua(tg);
+            boolean ok = new TacGiaClientController().sua(tg);
             if (ok) {
                 JOptionPane.showMessageDialog(this,
                     "Sửa tác giả thành công!",

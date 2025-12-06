@@ -1,6 +1,9 @@
 package model;
 
-public class CTPhieuTra {
+import java.io.Serializable;
+
+public class CTPhieuTra implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maPhieuTra;
 	private int maSach;
 	private String tenSach;
@@ -49,7 +52,6 @@ public class CTPhieuTra {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return tenSach + " (SL: " + soLuong + ") - " + tinhTrangSach;
 	}
 	

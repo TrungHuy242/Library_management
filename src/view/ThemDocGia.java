@@ -1,6 +1,6 @@
 package view;
 
-import controller.BanDocController;
+import client.BanDocClientController;
 import model.banDoc;
 import javax.swing.*;
 import java.awt.*;
@@ -377,7 +377,7 @@ public class ThemDocGia extends JDialog {
                 bd.setNgaySinh(java.sql.Date.valueOf(ngaySinh));
             }
 
-            boolean ok = new BanDocController().them(bd);
+            boolean ok = new BanDocClientController().them(bd);
             if (ok) {
                 JOptionPane.showMessageDialog(this, 
                     "Thêm độc giả thành công!", 

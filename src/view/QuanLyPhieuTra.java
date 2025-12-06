@@ -1,6 +1,6 @@
 package view;
 
-import controller.PhieuTraController;
+import client.PhieuTraClientController;
 import model.PhieuTra;
 import model.CTPhieuTra;
 import javax.swing.*;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class QuanLyPhieuTra extends JFrame {
 
-    private PhieuTraController ptCtrl = new PhieuTraController();
+    private PhieuTraClientController ptCtrl = new PhieuTraClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

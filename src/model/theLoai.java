@@ -1,6 +1,9 @@
 package model;
 
-public class theLoai {
+import java.io.Serializable;
+
+public class theLoai implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maTheLoai;
 	private String tenTheLoai;
 	public theLoai() {
@@ -25,7 +28,6 @@ public class theLoai {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return tenTheLoai;
 	}
 	

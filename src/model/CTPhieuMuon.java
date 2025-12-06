@@ -1,6 +1,9 @@
 package model;
 
-public class CTPhieuMuon {
+import java.io.Serializable;
+
+public class CTPhieuMuon implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maPhieuMuon;
 	private int maSach;
 	private String tenSach;
@@ -66,7 +69,6 @@ public class CTPhieuMuon {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return tenSach + " - " + tenTacGia + " (SL: " + soLuong + ")";
 	}
 	

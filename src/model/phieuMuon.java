@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class phieuMuon {
+public class phieuMuon implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maPhieuMuon;
 	private int maBanDoc;
 	private String tenBanDoc;
@@ -105,7 +107,6 @@ public class phieuMuon {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "PM" + maPhieuMuon + " - " + tenBanDoc + " (" + trangThai + ")";
 	}
 	

@@ -1,6 +1,6 @@
 package view;
 
-import controller.*;
+import client.*;
 import model.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -15,9 +15,9 @@ import java.util.Date;
 
 public class MuonSach extends JFrame {
 
-	private SachController sachCtrl = new SachController();
-	private BanDocController bdCtrl = new BanDocController();
-	private PhieuMuonController pmCtrl = new PhieuMuonController();
+	private SachClientController sachCtrl = new SachClientController();
+	private BanDocClientController bdCtrl = new BanDocClientController();
+	private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
 
 	private JTextField txtMaBD, txtHoTen, txtLop, txtTimKiem;
 	private JTable tableSach, tableMuon;

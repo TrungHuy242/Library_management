@@ -1,7 +1,7 @@
 package view;
 
-import controller.BanDocController;
-import controller.PhieuMuonController;
+import client.BanDocClientController;
+import client.PhieuMuonClientController;
 import model.banDoc;
 import model.phieuMuon;
 import model.CTPhieuMuon;
@@ -15,8 +15,8 @@ import java.util.Map;
 
 public class ThongKeDocGia extends JFrame {
 
-    private BanDocController bdCtrl = new BanDocController();
-    private PhieuMuonController pmCtrl = new PhieuMuonController();
+    private BanDocClientController bdCtrl = new BanDocClientController();
+    private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

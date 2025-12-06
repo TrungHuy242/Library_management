@@ -1,8 +1,8 @@
 package view;
 
-import controller.SachController;
-import controller.TacGiaController;
-import controller.TheLoaiController;
+import client.SachClientController;
+import client.TacGiaClientController;
+import client.TheLoaiClientController;
 import model.sach;
 import javax.swing.*;
 import java.awt.*;
@@ -366,7 +366,7 @@ public class ThemSach extends JDialog {
             s.setSoLuongTong(sl);
             s.setSoLuongHienTai(sl);
 
-            if (new SachController().them(s)) {
+            if (new SachClientController().them(s)) {
                 JOptionPane.showMessageDialog(this, 
                     "Thêm sách thành công!", 
                     "Thành công", 
@@ -388,7 +388,7 @@ public class ThemSach extends JDialog {
     }
 
     private void loadComboTacGia() {
-        HashMap<Integer, String> map = new TacGiaController().layTatCaMap();
+        HashMap<Integer, String> map = new TacGiaClientController().layTatCaMap();
         for (Integer id : map.keySet()) {
             cbTacGia.addItem(id);
         }
@@ -404,7 +404,7 @@ public class ThemSach extends JDialog {
     }
 
     private void loadComboTheLoai() {
-        HashMap<Integer, String> map = new TheLoaiController().layTatCaMap();
+        HashMap<Integer, String> map = new TheLoaiClientController().layTatCaMap();
         for (Integer id : map.keySet()) {
             cbTheLoai.addItem(id);
         }

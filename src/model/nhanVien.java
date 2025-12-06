@@ -1,6 +1,9 @@
 package model;
 
-public class nhanVien {
+import java.io.Serializable;
+
+public class nhanVien implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maNV;
 	private String hoTen;
 	private String sdt;
@@ -57,7 +60,6 @@ public class nhanVien {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return hoTen + " - " + vaiTro;
 	}
 	

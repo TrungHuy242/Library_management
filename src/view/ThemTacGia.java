@@ -1,6 +1,6 @@
 package view;
 
-import controller.TacGiaController;
+import client.TacGiaClientController;
 import model.tacGia;
 import javax.swing.*;
 import java.awt.*;
@@ -249,7 +249,7 @@ public class ThemTacGia extends JDialog {
             
             tg.setQuocTich(txtQuocTich.getText().trim());
 
-            boolean ok = new TacGiaController().them(tg);
+            boolean ok = new TacGiaClientController().them(tg);
             if (ok) {
                 JOptionPane.showMessageDialog(this,
                     "Thêm tác giả thành công!",

@@ -1,6 +1,9 @@
 package model;
 
-public class sach {
+import java.io.Serializable;
+
+public class sach implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maSach;
 	private String tenSach;
 	private int maTacGia;
@@ -123,7 +126,6 @@ public class sach {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return tenSach + " - " + tenTacGia;
 	}
 	

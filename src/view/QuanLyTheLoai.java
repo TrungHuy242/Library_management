@@ -1,6 +1,6 @@
 package view;
 
-import controller.TheLoaiController;
+import client.TheLoaiClientController;
 import model.theLoai;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 import java.util.List;
 
 public class QuanLyTheLoai extends JFrame {
-    private TheLoaiController theLoaiCtrl = new TheLoaiController();
+    private TheLoaiClientController theLoaiCtrl = new TheLoaiClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

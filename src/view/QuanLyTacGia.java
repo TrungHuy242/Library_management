@@ -1,6 +1,6 @@
 package view;
 
-import controller.TacGiaController;
+import client.TacGiaClientController;
 import model.tacGia;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 import java.util.List;
 
 public class QuanLyTacGia extends JFrame {
-    private TacGiaController tacGiaCtrl = new TacGiaController();
+    private TacGiaClientController tacGiaCtrl = new TacGiaClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

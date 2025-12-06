@@ -1,8 +1,8 @@
 package view;
 
-import controller.PhieuMuonController;
-import controller.PhieuTraController;
-import controller.AuthController;
+import client.PhieuMuonClientController;
+import client.PhieuTraClientController;
+import client.AuthClientController;
 import model.phieuMuon;
 import model.CTPhieuMuon;
 import model.CTPhieuTra;
@@ -21,9 +21,9 @@ public class TraSach extends JFrame {
     private JTextField txtMaPhieu, txtHoTen, txtNgayMuon, txtHanTra, txtQuaHan, txtTienPhat;
     private JTable table;
     private DefaultTableModel model;
-    private PhieuMuonController pmCtrl = new PhieuMuonController();
-    private PhieuTraController ptCtrl = new PhieuTraController();
-    private AuthController authCtrl = new AuthController();
+    private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
+    private PhieuTraClientController ptCtrl = new PhieuTraClientController();
+    private AuthClientController authCtrl = new AuthClientController();
     private phieuMuon currentPhieuMuon;
     private MainForm mainForm;
 

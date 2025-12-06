@@ -1,6 +1,6 @@
 package view;
 
-import controller.PhieuMuonController;
+import client.PhieuMuonClientController;
 import model.phieuMuon;
 import model.CTPhieuMuon;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class TheoDoiQuaHan extends JFrame {
 
-    private PhieuMuonController pmCtrl = new PhieuMuonController();
+    private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
     private DefaultTableModel model;
     private JTable table;
     private JLabel lblTongSo, lblTongNgayQuaHan;

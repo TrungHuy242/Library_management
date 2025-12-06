@@ -1,8 +1,8 @@
 package view;
 
-import controller.SachController;
-import controller.TacGiaController;
-import controller.TheLoaiController;
+import client.SachClientController;
+import client.TacGiaClientController;
+import client.TheLoaiClientController;
 import model.sach;
 import javax.swing.*;
 import java.awt.*;
@@ -300,7 +300,7 @@ public class SuaSach extends JDialog {
         }
         try {
             int soLuong = Integer.parseInt(sl);
-            sach s = new SachController().layTheoMa(maSach);
+            sach s = new SachClientController().layTheoMa(maSach);
             if (s != null && soLuong < s.getSoLuongHienTai()) {
                 lblErrorSoLuong.setText(">= " + s.getSoLuongHienTai());
                 txtSoLuong.setBorder(BorderFactory.createCompoundBorder(
@@ -372,7 +372,7 @@ public class SuaSach extends JDialog {
     }
 
     private void loadTacGia() {
-        mapTacGia = new TacGiaController().layTatCaMap();
+        mapTacGia = new TacGiaClientController().layTatCaMap();
         cbTacGia.addItem(null);
         for (Integer id : mapTacGia.keySet()) {
             cbTacGia.addItem(id);
@@ -392,7 +392,7 @@ public class SuaSach extends JDialog {
     }
 
     private void loadTheLoai() {
-        mapTheLoai = new TheLoaiController().layTatCaMap();
+        mapTheLoai = new TheLoaiClientController().layTatCaMap();
         cbTheLoai.addItem(null);
         for (Integer id : mapTheLoai.keySet()) {
             cbTheLoai.addItem(id);
@@ -453,7 +453,7 @@ public class SuaSach extends JDialog {
             int slTong = Integer.parseInt(txtSoLuong.getText().trim());
             s.setSoLuongTong(slTong);
 
-            boolean ok = new SachController().sua(s);
+            boolean ok = new SachClientController().sua(s);
             if (ok) {
                 JOptionPane.showMessageDialog(this, 
                     "Sửa sách thành công!", 

@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class banDoc {
+public class banDoc implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maBanDoc;
 	private String hoTen;
 	private String lop;
@@ -67,7 +69,6 @@ public class banDoc {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return maBanDoc + " - " + hoTen + " (" + (lop != null ? lop : "không có lớp") + ")";
 	}
 	

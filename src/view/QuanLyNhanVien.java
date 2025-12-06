@@ -1,6 +1,6 @@
 package view;
 
-import controller.AuthController;
+import client.AuthClientController;
 import model.nhanVien;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 import java.util.List;
 
 public class QuanLyNhanVien extends JFrame {
-    private AuthController authCtrl = new AuthController();
+    private AuthClientController authCtrl = new AuthClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

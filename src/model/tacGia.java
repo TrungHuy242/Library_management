@@ -1,6 +1,9 @@
 package model;
 
-public class tacGia {
+import java.io.Serializable;
+
+public class tacGia implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maTacGia;
 	private String tenTacGia;
 	private Integer namSinh;
@@ -41,7 +44,6 @@ public class tacGia {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return tenTacGia + (quocTich != null ? " (" + quocTich + ")" : "");
 	}
 	

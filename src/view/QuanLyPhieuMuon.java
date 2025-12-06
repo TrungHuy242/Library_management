@@ -1,6 +1,6 @@
 package view;
 
-import controller.PhieuMuonController;
+import client.PhieuMuonClientController;
 import model.phieuMuon;
 import model.CTPhieuMuon;
 import javax.swing.*;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class QuanLyPhieuMuon extends JFrame {
 
-    private PhieuMuonController pmCtrl = new PhieuMuonController();
+    private PhieuMuonClientController pmCtrl = new PhieuMuonClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTimKiem;

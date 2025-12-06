@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class PhieuTra {
+public class PhieuTra implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private int maPhieuTra;
 	private int maPhieuMuon;
 	private int maNV;
@@ -82,7 +84,6 @@ public class PhieuTra {
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "PT" + maPhieuTra + " - PM" + maPhieuMuon + " (Phạt: " + tienPhat + "đ)";
 	}
 	

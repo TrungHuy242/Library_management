@@ -1,13 +1,13 @@
 package view;
 
-import controller.AuthController;
+import client.AuthClientController;
 import model.nhanVien;
 import javax.swing.*;
 import java.awt.*;
 
 public class DangNhap extends javax.swing.JFrame {
 
-    private AuthController authCtrl = new AuthController();
+    private AuthClientController authCtrl = new AuthClientController();
 
     public DangNhap() {
         initComponents();

@@ -1,7 +1,7 @@
 package view;
 
-import controller.SachController;
-import controller.TheLoaiController;
+import client.SachClientController;
+import client.TheLoaiClientController;
 import model.sach;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class TraCuuSach extends JFrame {
-    private SachController sachCtrl = new SachController();
-    private TheLoaiController theLoaiCtrl = new TheLoaiController();
+    private SachClientController sachCtrl = new SachClientController();
+    private TheLoaiClientController theLoaiCtrl = new TheLoaiClientController();
     private DefaultTableModel model;
     private JTable table;
     private JTextField txtTenSach, txtTacGia, txtNhaXuatBan, txtNamXuatBan;
